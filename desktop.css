@@ -1,0 +1,504 @@
+/*Global variables and global design----------------------*/
+
+:root{
+
+    /*Background colors*/
+    --darkbg1:#2e3440;
+    --darkbg2:#3b4252;
+    --darkbg3:#434c5e;
+    --darkbg4:#4c566a;
+
+    --light1:#d8dee9;
+    --light2:#e5e9f0;
+    --light3:#eceff4;
+
+    --accent1:#8fbcbb;
+    --accent2:#88c0d0;
+    --accent3:#81a1c1;
+    --accent4:#5e81ac;
+
+    /*html background*/
+    --htmlbg1:var(--light1);
+    --htmlbg2:var(--light2);
+    --htmlbg3:var(--light3);
+    
+    /*navigation bar colors*/
+    --navbg: var(--darkbg1);
+    --navabg: var(--light1);
+    --navtxt: var(--accent1);
+    --navtrans:
+
+    /*header colours*/
+    --h1col: var(--darkbg1);
+
+    --h2dark: var(--accent3);
+    --h2darkbg: var(--darkbg4);
+
+    --h2light: var(--accent1);
+    --h2lightbg: var(--darkbg2);
+
+    --h3light: var(--accent1);
+    --h3dark: var();
+
+    /*section colours*/
+    --sectbgdarkest: var(--darkbg1);
+    --sectbgdarker: var(--darkbg2);
+    --sectbgdark: var(--darkbg3);
+    --sectbg: var(--darkbg4);
+
+    --seclf1: var(--accent1);
+    --seclf2: var(--accent2);
+    --seclf3: var(--accent3);
+    --seclf4: var(--accent4);
+
+    --transition: 0.3s ease-in-out;
+    --transglow: 0.5s ease-in-out;
+}
+
+/*Hover effects ----------------------------------------------------*/
+
+figure:hover {
+    cursor: default;
+    transform: translateY(-5px);
+    transition: var(--transglow);
+}
+
+h1:hover {
+    cursor: default;
+    scale: 1.05;
+    transition: var(--transglow);
+}
+
+#am:hover {
+    cursor: default;
+    transform: translateY(-4px);
+    transition: var(--transition);
+    color: var(--accent1);
+    box-shadow: 0px 8px 8px #00000035, 
+    0px 24px 24 #00000005;
+}
+
+nav ul li:hover {
+    background-color: var(--sectbgdark);
+    cursor: default;
+    transform: translateY(-3px);
+    transition: var(--transglow);
+}
+
+a:hover {
+    cursor: default;
+    color: var(--accent4);
+    transition: var(--transglow);
+}
+
+section:hover{
+    z-index: 0;
+    cursor: default;
+    transform: translateY(-3px);
+    transition: var(--transglow);
+    box-shadow: 0px 8px 8px #00000035, 
+    0px 24px 24 #00000005;
+}
+
+#edu div:hover {
+    cursor: default;
+    transform: translateY(-3px);
+    transition: var(--transition);
+}
+
+table:hover {
+    cursor: default;
+    transform: translateY(-3px);
+    transition: var(--transition);
+}
+
+#edutag:hover {
+    cursor: default;
+    transform: translateY(-5px);
+    transition: var(--transition);
+}
+
+
+/*Global variables -------------------------------------------------*/
+figure {
+    text-align: center;
+    border-color: var(--accent2);
+    background-color: var(--sectbgdarker);
+    border: solid 3px;
+    border-radius: 10px;
+    border-color: var(--accent4);
+    padding: 2vw;
+    box-shadow: 0px 4px 4px #00000060, 
+    0px 12px 12px #00000015;
+    transition: var(--transglow);
+}
+
+img {
+    border: solid 4px;
+    border-color: var(--accent2);
+}
+
+ul{
+    padding-inline-start: 0px;
+}
+
+ul li{
+    color: var(--accent3)
+}
+
+p {
+    color: var(--accent3);
+    padding: 1vw;
+}
+
+figcaption {
+    color: var(--accent2);
+}
+
+li {
+    color: var(--accent3);
+}
+
+dl{
+    display: block;
+}
+
+dt {
+    text-align: center;
+    color: var(--accent3);
+    font-weight: bold;
+}
+
+dd {
+    padding-inline-start: 0px;
+    color: var(--accent3);
+    text-align: center;
+    margin-inline-start: 0px;
+}
+
+
+
+/*Header designs------------------------------------------*/
+
+h1 {
+    font-size: 7vw;
+    font-weight: bold;
+    text-align: center;
+    color: var(--sectbgdarkest);
+    margin-top: 50vh;
+    margin-bottom: 50vh;
+    transition: var(--transglow); 
+}
+
+h1:hover {
+    scale: 1.05;
+    transition: var(--transglow);
+}
+
+h2 {
+    font-size: 2vw;
+    font-weight: bold;
+    text-align: center;
+    color: var(--h2light1);
+    color: var(--accent1);
+    background-color: var(--sectbgdarker);
+    padding: 0.5vw;
+    box-shadow: 0px 4px 4px #00000035, 
+    0px 12px 12px #00000010;
+}
+
+
+h3 {
+    font-size: 1.3vw;
+    font-weight: bold;
+    color: var(--accent2);
+}
+
+#am {
+    grid-area: am;
+    margin-bottom: 0.5vw;
+    font-size: 3vw;
+    text-align: center;
+    padding: 1vw;
+    color: var(--accent2);
+    border: solid 4px;
+    border-radius: 10px;
+    background-color: var(--sectbgdarker);
+    border-color: var(--seclf1);
+    transition: var(--transglow);
+}
+
+
+
+
+
+
+/*Containers and global-----------------------------------*/
+
+html{
+    background-color: var(--htmlbg1);
+}
+
+body {
+    margin: 0;
+    display: grid;
+    grid-auto-rows: minmax(60, auto);
+    row-gap: 2vh;
+    font-family: 'Tahoma', 'Arial', sans-serif;
+}
+
+article {
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+    display: grid;
+    grid-auto-rows: repeat(auto-fill, 1fr);
+    grid-auto-columns: 1fr 1fr;
+    row-gap: 2vw;
+    column-gap: 3vh;
+    grid-template-areas: 
+    "am am"
+    "pi cg"
+    "edu edu"
+    "sk we"
+    "int ach"
+    "hb hb"
+    ;
+}
+
+footer {
+    width: 100%;
+    bottom: 0;
+    float: left;
+    text-align: center;
+    background-color: var(--darkbg1);
+    color: var(--accent1);
+}
+
+a {
+    color: var(--accent1);
+    text-decoration: none;
+} 
+
+strong {
+    color: var(--accent2);
+}
+
+table {
+    border-collapse: collapse;
+    grid-area: table1;
+    background-color: var(--sectbgdark);
+    color: var(--accent3);
+    box-shadow: 0px 4px 4px #00000060, 
+    0px 12px 12px #00000015;
+    transition: var(--transglow);
+}
+
+th {
+    color: var(--accent2);
+    background-color: var(--darkbg2);
+}
+
+tbody, tr, th, td {
+    border: solid 3px;
+    text-align: center;
+    /* padding: 1vw 2vw; */
+    border-color: var(--darkbg1);
+}
+
+/*Navigation bar - topmost area --------------------------*/
+
+nav {
+    position: fixed;
+    z-index: 2;
+    background-color: var(--navbg);
+    top: 0;
+    margin: 0%;
+    width: 100%;
+    border-bottom: solid 4px;
+    border-color: var(--accent1);
+    transition: var(--transglow);
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    text-decoration: none;
+    list-style: none;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+nav ul li {
+    flex: 1 1 auto;
+    background-color: var(--sectbgdarker);
+    padding: 3vh 0vh;
+    text-decoration: none;
+    text-align: center;
+    margin-right: 1.5vw;
+    border: solid 1px;
+    border-color: var(--darkbg3);
+    box-shadow: 0px 4px 4px #00000035, 
+    0px 12px 12px #00000010;
+}
+
+
+
+nav ul li a{
+    flex: 1 0 auto;
+    font-size: 1.1vw;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--navtxt);
+}
+
+/*article sections ---------------------------------------*/
+
+section {
+    z-index: 1;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-bottom: 2vw;
+    font-size: 1vw;
+    border: solid 4px;
+    border-color: var(--accent4);
+    background-color: var(--sectbgdarkest);
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #00000060, 
+    0px 12px 12px #00000015;
+    transition: var(--transglow);
+}
+
+#pi {
+    grid-area: pi;
+}
+
+#cg {
+    grid-area: cg;
+}
+
+#edu {
+    grid-area: edu;
+    background-color: var(--sectbgdarkest);
+
+    display: grid;
+    row-gap: 1vw;
+    column-gap: 1vw;
+    grid-template-rows: repeat(auto-fill, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "edutag edutag"
+    "ug pg"
+    "table1 table1"
+    ;
+}
+
+#we {
+    grid-area: we;
+}
+
+#we ul {
+    padding-inline-start: 15px;
+}
+
+/*edu divisions*/
+
+#edu div{
+    border: solid 3px;
+    padding: 1vw 1vw;
+    margin: 1vw, 1vw, 1vw, 1vw;
+    border-color: var(--darkbg1);
+}
+
+#edu ul {
+    list-style-type: none;
+}
+
+#edutag {
+    padding: 2vw;
+    grid-area: edutag;
+    margin-top: 2vw;
+    margin-bottom: 0vw;
+    background-color: var(--sectbgdarker);
+}
+
+#edutag h2 {
+    text-align: center;
+}
+
+#ug{
+    text-align: center;
+    grid-area: ug;
+    color: var(--accent3);
+    background-color: var(--sectbgdarker);
+    box-shadow: 0px 4px 4px #00000035, 
+    0px 12px 12px #00000010;
+}
+
+#pg{
+    text-align: center;
+    grid-area: pg;
+    color: var(--accent3);
+    background-color: var(--sectbgdarker);
+    box-shadow: 0px 4px 4px #00000035, 
+    0px 12px 12px #00000010;
+}
+
+
+/*hobbies, interests, achievements divisions*/
+
+#hbintsk div{
+    border: solid 4px;  
+    border-color: var(--accent2); 
+    padding: 0.5vw 2vw;
+}
+
+#ach {
+    grid-area: ach;
+    background-color: var(--sectbgdarkest);
+}
+
+#int {
+    grid-area: int;
+    background-color: var(--sectbgdarkest);
+}
+
+#sk {
+    grid-area: sk;
+    background-color: var(--sectbgdarkest);
+}
+
+#hb {
+    grid-area: hb;
+    background-color: var(--sectbgdarkest);
+}
+
+#hb figure {
+    display: inline-block;
+    text-align: center;
+    margin: 1vw;
+    transition: var(--transglow);
+}
+
+#gallery {
+    text-align: center;
+}
+
+.imgnar {
+    width: 15vw;
+    height: 19vw;
+    border-color: var(--accent2);
+    ;
+}
+
+.imgwide {
+    width: 25vw;
+    height: 19vw;
+    border-color: var(--accent2);
+}
+
+.imgbox {
+    width: 25vw;
+    height: 19vw;
+    border-color: var(--accent2);
+}
