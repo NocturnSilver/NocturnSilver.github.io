@@ -301,7 +301,6 @@ th {
 tbody, tr, th, td {
     border: solid 3px;
     text-align: center;
-    /* padding: 1vw 2vw; */
     border-color: var(--darkbg1);
 }
 
@@ -466,6 +465,10 @@ section {
 #sk {
     grid-area: sk;
     background-color: var(--sectbgdarkest);
+}
+
+#sk ul{
+    list-style-type: none;
 }
 
 #hb {
